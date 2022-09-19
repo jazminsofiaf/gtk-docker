@@ -6,7 +6,7 @@ services:
     ports:
       - "0:0"
     environment:
-      - DISPLAY=192.168.1.27:0
+      - DISPLAY=${MY_IP}:0
     volumes:
       - ./my-gtk-app:/root/my-gtk-app
       - /tmp/.X11-unix:/tmp/.X11-unix

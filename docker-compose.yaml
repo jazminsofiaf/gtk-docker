@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  app:
+    image: gtkimage:latest
+    network_mode: "host"
+    ports:
+      - "0:0"
+    environment:
+      - DISPLAY=192.168.1.27:0
+    volumes:
+      - ./my-gtk-app:/root/my-gtk-app
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    stdin_open: true # docker run -i
+    tty: true # docker run -t

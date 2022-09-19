@@ -3,8 +3,6 @@ services:
   app:
     image: gtkimage:latest
     network_mode: "host"
-    ports:
-      - "0:0"
     environment:
       - DISPLAY=${MY_IP}:0
     volumes:
